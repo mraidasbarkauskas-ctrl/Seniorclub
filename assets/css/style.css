@@ -24,6 +24,8 @@
   --jade:#1B2E6B;       /* brand navy, mid tone (site primary #162662) */
   --jade-light:#5C74C7; /* lighter navy tint for accents/badges */
   --brand-red:#DD3333;  /* brand secondary red (from seniorclub.fi customizer) — sparing use only */
+  --brand-blue:#6FA6D4;      /* real seniorclub.fi section background (sampled from live site) */
+  --brand-blue-deep:#4A80B0; /* darker blue for gradient depth on hero/programs */
   --glass-bg: rgba(255,255,255,0.55);
   --glass-border: rgba(239,203,124,0.55);
   --glass-shadow: 0 8px 32px rgba(36,28,19,0.18);
@@ -187,19 +189,19 @@ nav.main-nav{display:flex; align-items:center; justify-content:space-between; he
 /* ===== Hero ===== */
 .hero{
   background:
-    radial-gradient(1100px 480px at 88% -10%, rgba(217,184,124,.35), transparent 60%),
-    linear-gradient(180deg, var(--cream-050) 0%, var(--white) 75%);
+    radial-gradient(1100px 480px at 88% -10%, rgba(255,255,255,.16), transparent 60%),
+    linear-gradient(180deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
   padding:64px 0 56px;
   overflow:hidden;
 }
 .hero .container{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;}
 @media (max-width:900px){ .hero .container{grid-template-columns:1fr; gap:36px;} .hero{padding:36px 0 40px;} }
 .hero-eyebrow{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;}
-.hero-eyebrow span{font-size:0.8rem; font-weight:700; color:var(--gold-700); background:var(--cream-100); padding:7px 14px; border-radius:8px; letter-spacing:.03em;}
-.hero h1{font-size:clamp(2.1rem, 4vw, 3.2rem); max-width:13ch;}
-.hero h1 em{font-style:italic; font-weight:500; color:var(--gold-700);}
+.hero-eyebrow span{font-size:0.8rem; font-weight:700; color:var(--jade-deep); background:#fff; padding:7px 14px; border-radius:8px; letter-spacing:.03em;}
+.hero h1{font-size:clamp(2.1rem, 4vw, 3.2rem); max-width:13ch; color:#fff;}
+.hero h1 em{font-style:italic; font-weight:500; color:var(--gold-300);}
 .inner-hero h1 em{font-style:italic; font-weight:500; color:var(--gold-700);}
-.hero-sub{margin-top:20px; font-size:1.15rem; color:var(--muted); max-width:44ch; line-height:1.65;}
+.hero-sub{margin-top:20px; font-size:1.15rem; color:#fff; opacity:.95; max-width:44ch; line-height:1.65;}
 .hero-cta{display:flex; gap:16px; margin-top:34px; flex-wrap:wrap;}
 @media (max-width:640px){ .hero-cta{flex-direction:column; align-items:stretch;} .hero-cta .btn{justify-content:center; text-align:center; width:100%;} }
 
@@ -226,6 +228,12 @@ nav.main-nav{display:flex; align-items:center; justify-content:space-between; he
 .pillar-icon svg{width:28px; height:28px; color:var(--gold-700);}
 .pillar h3{font-size:1.15rem; margin-bottom:6px;}
 .pillar p{font-size:0.96rem; color:var(--muted); margin:0 auto;}
+
+/* ===== Programs section — real seniorclub.fi sky-blue background ===== */
+#programs{background:var(--brand-blue); position:relative;}
+#programs .eyebrow{color:#fff; opacity:.9;}
+#programs .section-head h2{color:#fff;}
+#programs .section-head p{color:#fff; opacity:.92;}
 
 /* ===== Program cards ===== */
 .card-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; margin-top:44px;}
