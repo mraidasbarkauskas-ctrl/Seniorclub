@@ -355,11 +355,20 @@ footer.site-footer{background:var(--jade-deep); color:var(--cream-100); padding:
 
 .table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch; margin-top:10px; border-radius:14px;}
 .schedule-table{width:100%; min-width:640px; border-collapse:collapse;}
-.swipe-hint{display:none; font-size:0.8rem; color:var(--gold-600); font-weight:700; margin-top:8px;}
-@media (max-width:700px){ .swipe-hint{display:block;} }
 .schedule-table th,.schedule-table td{text-align:left; padding:14px 16px; border-bottom:1px solid var(--line); font-size:0.98rem;}
 .schedule-table th{font-size:0.78rem; text-transform:uppercase; letter-spacing:.06em; color:var(--gold-600); font-weight:700;}
 .schedule-table tr:last-child td{border-bottom:none;}
+
+/* Mobile: cards instead of a horizontally-scrolling table */
+.schedule-cards{display:none;}
+@media (max-width:700px){
+  .table-scroll{display:none;}
+  .schedule-cards{display:grid; gap:14px; margin-top:10px;}
+  .schedule-card{background:var(--white); border:1px solid var(--line); border-radius:14px; padding:16px 18px;}
+  .schedule-card .sc-day{font-size:0.78rem; text-transform:uppercase; letter-spacing:.06em; color:var(--gold-600); font-weight:700;}
+  .schedule-card .sc-group{font-family:'Fraunces',serif; font-size:1.1rem; margin:4px 0 8px;}
+  .schedule-card .sc-meta{font-size:0.95rem; color:var(--muted); display:flex; flex-direction:column; gap:2px;}
+}
 
 /* ===== Marquee ticker ===== */
 .marquee{background:var(--cream-100); border-top:1px solid var(--line); border-bottom:1px solid var(--line); overflow:hidden; padding:18px 0; margin:44px 0;}
