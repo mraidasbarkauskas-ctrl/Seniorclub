@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="en" href="https://www.seniorclub.fi/en/ota-yhteytta/">
 <link rel="alternate" hreflang="ru" href="https://www.seniorclub.fi/ru/ota-yhteytta/">
 <link rel="alternate" hreflang="x-default" href="https://www.seniorclub.fi/fi/ota-yhteytta/">
-<meta name="theme-color" content="#122C23">
+<meta name="theme-color" content="#101B45">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192.png">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -139,7 +139,9 @@
           <dl style="margin-top:28px;"><div><dt>Адрес</dt><dd>Rauduntie 12 D 8, 02130 Espoo, Финляндия</dd></div><div><dt>Эл. почта</dt><dd>seniorclub@seniorclub.fi</dd></div><div><dt>Телефон</dt><dd>+358 50 462 3270</dd></div><div><dt>Языки</dt><dd>Финский · Английский · Русский</dd></div></dl>
         </div>
         <div class="contact-form-card">
-          <form id="contactForm" data-subject="Присоединяйтесь к нам" data-l-name="Имя" data-l-email="Электронная почта" data-l-phone="Телефон" data-l-interest="Интерес">
+          <form id="contactForm" class="real-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-subject="Присоединяйтесь к нам" data-l-name="Имя" data-l-email="Электронная почта" data-l-phone="Телефон" data-l-interest="Интерес">
+            <input type="hidden" name="_subject" value="Новое сообщение — seniorclub.fi">
+            <label class="hp-field" aria-hidden="true">Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
             <div class="form-grid">
               <div class="form-field"><label for="f-name">Имя *</label><input id="f-name" name="name" type="text" required></div>
               <div class="form-field"><label for="f-email">Электронная почта *</label><input id="f-email" name="email" type="email" required></div>
@@ -154,7 +156,8 @@
               <div class="form-field full"><label for="f-message">Сообщение</label><textarea id="f-message" name="message"></textarea></div>
             </div>
             <button type="submit" class="btn btn-primary">Отправить</button>
-            <div id="formSuccess" class="form-success">✓ Спасибо! Мы свяжемся с вами в ближайшее время.</div>
+            <div id="formSuccess" class="form-success" tabindex="-1" aria-live="polite">✓ Спасибо! Мы свяжемся с вами в ближайшее время.</div>
+            <div class="form-error" tabindex="-1" aria-live="assertive">✕ Не удалось отправить. Попробуйте ещё раз через минуту или напишите нам напрямую: <a href="mailto:seniorclub@seniorclub.fi">seniorclub@seniorclub.fi</a>.</div>
             <p class="form-note">Вы также можете позвонить или написать нам напрямую на почту seniorclub@seniorclub.fi.</p>
           </form>
         </div>
