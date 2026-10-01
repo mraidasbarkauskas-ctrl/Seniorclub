@@ -407,6 +407,60 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.seniorclub.fi/fi/laheisille/</loc>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.seniorclub.fi/fi/laheisille/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.seniorclub.fi/en/laheisille/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.seniorclub.fi/ru/laheisille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.seniorclub.fi/fi/laheisille/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seniorclub.fi/en/laheisille/</loc>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.seniorclub.fi/fi/laheisille/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.seniorclub.fi/en/laheisille/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.seniorclub.fi/ru/laheisille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.seniorclub.fi/fi/laheisille/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seniorclub.fi/ru/laheisille/</loc>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.seniorclub.fi/fi/laheisille/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.seniorclub.fi/en/laheisille/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.seniorclub.fi/ru/laheisille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.seniorclub.fi/fi/laheisille/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.seniorclub.fi/fi/meista/</loc>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.seniorclub.fi/fi/meista/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.seniorclub.fi/en/meista/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.seniorclub.fi/ru/meista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.seniorclub.fi/fi/meista/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.seniorclub.fi/en/meista/</loc>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.seniorclub.fi/fi/meista/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.seniorclub.fi/en/meista/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.seniorclub.fi/ru/meista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.seniorclub.fi/fi/meista/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.seniorclub.fi/ru/meista/</loc>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.seniorclub.fi/fi/meista/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.seniorclub.fi/en/meista/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.seniorclub.fi/ru/meista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.seniorclub.fi/fi/meista/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.seniorclub.fi/fi/ota-yhteytta/</loc>
     <xhtml:link rel="alternate" hreflang="fi" href="https://www.seniorclub.fi/fi/ota-yhteytta/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.seniorclub.fi/en/ota-yhteytta/"/>
