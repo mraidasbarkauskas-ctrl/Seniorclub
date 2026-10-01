@@ -3,33 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 — Sivua ei löytynyt | Seniorclub</title>
+<title>404 — Sivua ei löytynyt | Page not found | Страница не найдена | Seniorclub</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <style>
-  .nf{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 24px;background:var(--cream-050);}
-  .nf .box{max-width:560px;}
-  .nf h1{font-size:clamp(2.2rem,6vw,4rem);margin:18px 0 10px;}
-  .nf .code{font-family:'Fraunces',serif;font-size:6rem;line-height:1;color:var(--gold-400);}
-  .nf p{margin:0 auto 8px;color:var(--muted);}
-  .nf .links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px;}
+  .nf{min-height:100vh;padding:56px 24px;background:var(--cream-050);}
+  .nf-top{max-width:720px;margin:0 auto 40px;text-align:center;}
+  .nf-top .code{font-family:'Fraunces',serif;font-size:5rem;line-height:1;color:var(--gold-400);}
+  .nf-top h1{font-size:clamp(1.6rem,4vw,2.2rem);margin:10px 0 0;}
+  .nf-cols{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media (max-width:760px){.nf-cols{grid-template-columns:1fr;}}
+  .nf-col{background:#fff;border:1px solid var(--line,#e6e1d6);border-radius:14px;padding:24px 22px;}
+  .nf-col h2{font-size:1.15rem;margin:0 0 8px;}
+  .nf-col p{color:var(--muted);margin:0 0 16px;font-size:.96rem;}
+  .nf-col .links{display:flex;flex-direction:column;gap:8px;}
+  .nf-col .links a{font-weight:700;}
+  .nf-logo{display:block;height:56px;margin:0 auto 18px;}
 </style>
 </head>
 <body>
 <main class="nf">
-  <div class="box">
-    <img src="/assets/images/logo.png" alt="Seniorclub" style="height:64px;margin:0 auto 10px;">
+  <div class="nf-top">
+    <img class="nf-logo" src="/assets/images/logo.png" alt="Seniorclub">
     <div class="code">404</div>
-    <h1>Sivua ei löytynyt</h1>
-    <p>Page not found · Страница не найдена</p>
-    <p>Osoite on saattanut muuttua. Valitse kieli ja jatka etusivulta.</p>
-    <div class="links">
-      <a class="btn btn-primary" href="/fi/">Etusivu (FI)</a>
-      <a class="btn btn-ghost" href="/en/">Home (EN)</a>
-      <a class="btn btn-ghost" href="/ru/">Главная (RU)</a>
+    <h1>Sivua ei löytynyt · Page not found · Страница не найдена</h1>
+  </div>
+  <div class="nf-cols">
+    <div class="nf-col">
+      <h2>🇫🇮 Suomi</h2>
+      <p>Etsimääsi sivua ei löytynyt — osoite on saattanut muuttua tai poistua käytöstä. Jatka alta.</p>
+      <div class="links">
+        <a class="btn btn-primary btn-block" href="/fi/">Etusivu</a>
+        <a href="/fi/#programs">Toimintamme</a>
+        <a href="/fi/aikataulut/">Aikataulut</a>
+        <a href="/fi/ota-yhteytta/">Ota yhteyttä</a>
+      </div>
+    </div>
+    <div class="nf-col">
+      <h2>🇬🇧 English</h2>
+      <p>The page you were looking for could not be found — the address may have changed. Continue below.</p>
+      <div class="links">
+        <a class="btn btn-primary btn-block" href="/en/">Home</a>
+        <a href="/en/#programs">What we do</a>
+        <a href="/en/aikataulut/">Schedule</a>
+        <a href="/en/ota-yhteytta/">Contact us</a>
+      </div>
+    </div>
+    <div class="nf-col">
+      <h2>🇷🇺 Русский</h2>
+      <p>Страница, которую вы искали, не найдена — адрес мог измениться. Продолжите ниже.</p>
+      <div class="links">
+        <a class="btn btn-primary btn-block" href="/ru/">Главная</a>
+        <a href="/ru/#programs">Наша деятельность</a>
+        <a href="/ru/aikataulut/">Расписание</a>
+        <a href="/ru/ota-yhteytta/">Связаться с нами</a>
+      </div>
     </div>
   </div>
 </main>
