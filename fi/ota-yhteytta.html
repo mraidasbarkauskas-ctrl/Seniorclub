@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="en" href="https://www.seniorclub.fi/en/ota-yhteytta/">
 <link rel="alternate" hreflang="ru" href="https://www.seniorclub.fi/ru/ota-yhteytta/">
 <link rel="alternate" hreflang="x-default" href="https://www.seniorclub.fi/fi/ota-yhteytta/">
-<meta name="theme-color" content="#122C23">
+<meta name="theme-color" content="#101B45">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192.png">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -139,7 +139,9 @@
           <dl style="margin-top:28px;"><div><dt>Osoite</dt><dd>Rauduntie 12 D 8, 02130 Espoo</dd></div><div><dt>Sähköposti</dt><dd>seniorclub@seniorclub.fi</dd></div><div><dt>Puhelin</dt><dd>+358 50 462 3270</dd></div><div><dt>Kielet</dt><dd>Suomi · Englanti · Venäjä</dd></div></dl>
         </div>
         <div class="contact-form-card">
-          <form id="contactForm" data-subject="Liity mukaan" data-l-name="Nimi" data-l-email="Sähköposti" data-l-phone="Puhelin" data-l-interest="Kiinnostaa">
+          <form id="contactForm" class="real-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-subject="Liity mukaan" data-l-name="Nimi" data-l-email="Sähköposti" data-l-phone="Puhelin" data-l-interest="Kiinnostaa">
+            <input type="hidden" name="_subject" value="Uusi yhteydenotto — seniorclub.fi">
+            <label class="hp-field" aria-hidden="true">Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
             <div class="form-grid">
               <div class="form-field"><label for="f-name">Nimi *</label><input id="f-name" name="name" type="text" required></div>
               <div class="form-field"><label for="f-email">Sähköposti *</label><input id="f-email" name="email" type="email" required></div>
@@ -154,7 +156,8 @@
               <div class="form-field full"><label for="f-message">Viesti</label><textarea id="f-message" name="message"></textarea></div>
             </div>
             <button type="submit" class="btn btn-primary">Lähetä</button>
-            <div id="formSuccess" class="form-success">✓ Kiitos! Otamme sinuun yhteyttä pian.</div>
+            <div id="formSuccess" class="form-success" tabindex="-1" aria-live="polite">✓ Kiitos! Otamme sinuun yhteyttä pian.</div>
+            <div class="form-error" tabindex="-1" aria-live="assertive">✕ Lähetys epäonnistui. Yritä hetken kuluttua uudelleen tai kirjoita suoraan osoitteeseen <a href="mailto:seniorclub@seniorclub.fi">seniorclub@seniorclub.fi</a>.</div>
             <p class="form-note">Voit myös soittaa tai kirjoittaa meille suoraan osoitteeseen seniorclub@seniorclub.fi.</p>
           </form>
         </div>
