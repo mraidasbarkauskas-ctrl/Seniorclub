@@ -423,7 +423,15 @@ footer.site-footer{background:var(--jade-deep); color:var(--cream-100); padding:
   display:none; align-items:center; gap:10px;
 }
 .form-success.show{display:flex;}
+.form-error{
+  margin-top:16px; background:rgba(221,51,51,.1); border:1px solid var(--brand-red, #dd3333);
+  color:#8a1d1d; border-radius:14px; padding:16px 20px; font-weight:700; font-size:0.96rem;
+  display:none; align-items:center; gap:10px;
+}
+.form-error.show{display:flex;}
 .form-note{font-size:0.8rem; color:var(--muted); margin-top:14px;}
+.contact-form-card .btn-primary.is-loading{opacity:.7; cursor:wait;}
+.hp-field{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
 
 /* Skip link for accessibility */
 body.nav-open{overflow:hidden;}
