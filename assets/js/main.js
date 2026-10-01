@@ -31,33 +31,44 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Contact form: build a mailto link from the fields and show a thank-you note.
-  // (Static site — no backend yet, so this opens the visitor's email client
-  // pre-filled with their message rather than submitting silently.)
-  var contactForm = document.getElementById('contactForm');
-  if (contactForm) {
+  // Contact form(s): real submission via the form's own action endpoint
+  // (Formspree — see README for setup), with an accessible success/error
+  // state instead of a fake mailto link.
+  document.querySelectorAll('form.real-contact-form').forEach(function (contactForm) {
+    var submitBtn = contactForm.querySelector('button[type="submit"]');
+    var success = contactForm.querySelector('.form-success');
+    var error = contactForm.querySelector('.form-error');
+
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var data = new FormData(contactForm);
-      var name = data.get('name') || '';
-      var email = data.get('email') || '';
-      var phone = data.get('phone') || '';
-      var interest = data.get('interest') || '';
-      var message = data.get('message') || '';
-      var subject = contactForm.dataset.subject || 'Yhteydenotto';
-      var bodyLines = [
-        (contactForm.dataset.lName || 'Name') + ': ' + name,
-        (contactForm.dataset.lEmail || 'Email') + ': ' + email,
-        (contactForm.dataset.lPhone || 'Phone') + ': ' + phone,
-        (contactForm.dataset.lInterest || 'Interest') + ': ' + interest,
-        '', message
-      ];
-      var mailto = 'mailto:seniorclub@seniorclub.fi'
-        + '?subject=' + encodeURIComponent(subject + ' — ' + name)
-        + '&body=' + encodeURIComponent(bodyLines.join('\n'));
-      window.location.href = mailto;
-      var success = document.getElementById('formSuccess');
-      if (success) success.classList.add('show');
+
+      // Honeypot: if this hidden field got filled in, silently drop it
+      // (bots fill every field; real visitors never see or touch it).
+      var honeypot = contactForm.querySelector('input[name="_gotcha"]');
+      if (honeypot && honeypot.value) return;
+
+      if (error) { error.classList.remove('show'); }
+      if (success) { success.classList.remove('show'); }
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.classList.add('is-loading'); }
+
+      var formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          contactForm.reset();
+          if (success) { success.classList.add('show'); success.focus(); }
+        } else {
+          if (error) { error.classList.add('show'); error.focus(); }
+        }
+      }).catch(function () {
+        if (error) { error.classList.add('show'); error.focus(); }
+      }).finally(function () {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('is-loading'); }
+      });
     });
-  }
+  });
 });
