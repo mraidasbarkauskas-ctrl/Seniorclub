@@ -352,6 +352,7 @@ footer.site-footer{background:var(--jade-deep); color:var(--cream-100); padding:
 .related-card:hover{transform:translateY(-3px); box-shadow:var(--shadow);}
 .related-card img{width:100%; aspect-ratio:4/2.6; object-fit:cover;}
 .related-card .rc-body{padding:14px 16px;}
+.related-card .rc-body p{font-size:.9rem; font-weight:400; color:var(--muted); margin:6px 0 0; line-height:1.5;}
 .related-card h4{font-size:0.96rem; color:var(--gold-900);}
 
 .table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch; margin-top:10px; border-radius:14px;}
