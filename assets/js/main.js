@@ -72,3 +72,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Preselect form interest from ?aihe=laheinen (used by the Läheisille page CTA)
+document.addEventListener('DOMContentLoaded', function () {
+  try {
+    var q = new URLSearchParams(window.location.search).get('aihe');
+    var sel = document.getElementById('f-interest');
+    if (q && sel) { sel.value = q; }
+  } catch (e) {}
+});

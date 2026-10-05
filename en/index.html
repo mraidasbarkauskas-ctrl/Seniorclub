@@ -90,17 +90,20 @@
         <img src="/assets/images/logo.png" alt="Seniorclub — excellence of mental health">
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a class="active" href="/en/">Home</a></li>
+        <li><a href="/en/" aria-current="page">Home</a></li>
         <li class="nav-dropdown">
-          <a href="#programs">MUMILI Club <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="/en/#programs">What we do <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"/></svg></a>
           <div class="dropdown-menu">
             <a href="/en/mumili/">MUMILI — Memory, Mind and Movement</a>
             <a href="/en/seniori-sielunystavat/">Seniors' Friendship Club</a>
-            <a href="/en/seniori-samurai/">Senior Samurai</a>
             <a href="/en/seniori-mieli/">Seniors' Mind</a>
+            <a href="/en/seniori-samurai/">Senior Samurai</a>
             <a href="/en/seniorien-liikunta/">Seniors' Fitness</a>
+            <a href="/en/oppiminen-ja-osallisuus/">Learning and participation</a>
           </div>
         </li>
+        <li><a href="/en/aikataulut/">Schedule</a></li>
+        <li><a href="/en/laheisille/">For family &amp; friends</a></li>
         <li class="nav-dropdown">
           <a href="/en/hanketoiminta/">Projects <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"/></svg></a>
           <div class="dropdown-menu">
@@ -110,12 +113,15 @@
             <a href="/en/monikielisten-ikaantyneiden-psykososiaalinen-tuki/">Psychosocial support for multilingual seniors</a>
           </div>
         </li>
-        <li><a href="/en/meista/">About us</a></li>
-          <li><a href="/en/laheisille/">For family &amp; friends</a></li>
-        <li><a href="/en/aikataulut/">Schedule</a></li>
-        <li><a href="/en/asiakas-palautteet/">Testimonials</a></li>
+        <li class="nav-dropdown">
+          <a href="/en/meista/">About us <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="/en/meista/">Suomen Senior Club ry</a>
+            <a href="/en/asiakas-palautteet/">Testimonials</a>
+          </div>
+        </li>
         <li><a href="/en/nain-voit-auttaa/">How to help</a></li>
-        <li><a href="/en/ota-yhteytta/">Contact</a></li>
+        <li class="nav-contact-li"><a href="/en/ota-yhteytta/">Contact</a></li>
       </ul>
       <div class="nav-cta">
         <span class="phone">📞 +358 50 462 3270</span>
@@ -235,8 +241,18 @@
           <div class="body">
             <span class="tag">Fitness</span>
             <h3>Seniors' Fitness</h3>
-            <p>Senior Strength — Movement and Memory. Moving together brings energy and good spirits.</p>
+            <p>Seniors' Fitness for energy, longevity and a sharp memory.</p>
             <a class="more" href="/en/seniorien-liikunta/">Read more <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="prog-card">
+          <img class="thumb" loading="lazy" decoding="async" src="/assets/images/card-oppiminen.jpg" alt="Illustration: learning and participation">
+          <div class="body">
+            <span class="tag">Learning</span>
+            <h3>Learning and participation</h3>
+            <p>Finnish language learning, digital skills, culture and everyday learning — learning and participation for older people.</p>
+            <a class="more" href="/en/oppiminen-ja-osallisuus/">Read more <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
           </div>
         </article>
       </div>
@@ -338,8 +354,8 @@
                 <label for="f-interest">Interested in</label>
                 <select id="f-interest" name="interest">
                   <option value="">Choose a club</option>
-                  <option value="MUMILI">MUMILI</option><option value="Seniors' Friendship Club">Seniors' Friendship Club</option><option value="Senior Samurai">Senior Samurai</option><option value="Seniors' Mind">Seniors' Mind</option><option value="Seniors' Memory">Seniors' Memory</option><option value="Seniors' Fitness">Seniors' Fitness</option><option value="Other / not sure yet">Other / not sure yet</option>
-                </select>
+                  <option value="MUMILI">MUMILI</option><option value="Seniors' Friendship Club">Seniors' Friendship Club</option><option value="Senior Samurai">Senior Samurai</option><option value="Seniors' Mind">Seniors' Mind</option><option value="Learning and participation">Learning and participation</option><option value="Seniors' Fitness">Seniors' Fitness</option><option value="Other / not sure yet">Other / not sure yet</option>
+                <option value="laheinen">I’m looking for activities for my loved one</option></select>
               </div>
               <div class="form-field full"><label for="f-message">Message</label><textarea id="f-message" name="message"></textarea></div>
             </div>
@@ -377,6 +393,7 @@
           <li><a href="/en/seniori-samurai/">Senior Samurai</a></li>
           <li><a href="/en/seniori-mieli/">Seniors' Mind</a></li>
           <li><a href="/en/seniorien-liikunta/">Seniors' Fitness</a></li>
+          <li><a href="/en/oppiminen-ja-osallisuus/">Learning and participation</a></li>
         </ul>
       </div>
       <div>
