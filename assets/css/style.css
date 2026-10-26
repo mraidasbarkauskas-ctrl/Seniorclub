@@ -457,3 +457,28 @@ body.nav-open{overflow:hidden;}
 .home-link-band h3{margin:0; font-size:1.3rem;}
 @media (max-width:900px){.need-grid{grid-template-columns:repeat(2,1fr);} .mini-schedule{grid-template-columns:1fr;}}
 @media (max-width:560px){.need-grid{grid-template-columns:1fr;}}
+
+/* --- client comments 26.10 --- */
+.sched-day{font-size:1.35rem; margin:34px 0 8px; color:var(--jade);}
+.sched-day:first-child{margin-top:0;}
+.content-block h3.sched-day{margin:26px 0 4px; font-size:1.1rem; color:var(--jade);}
+.event-list{display:grid; gap:18px; margin-top:18px;}
+.event-item{background:var(--white); border:1px solid var(--line); border-radius:16px; padding:20px 24px;}
+.event-item h3{margin:4px 0 10px;}
+.event-item .ev-date{font-size:.82rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--gold-700);}
+.ev-img{display:block; max-width:min(100%,360px); height:auto; border-radius:14px; margin:12px 0 16px;}
+.ev-img-wide{display:block; max-width:100%; height:auto; border-radius:18px;}
+.video-block video{width:100%; height:auto; border-radius:16px; background:#000;}
+.footer-fb{color:inherit; text-decoration:underline;}
+@media (min-width:1101px) and (max-width:1700px){
+  .nav-links{gap:14px; flex-wrap:nowrap;}
+  .nav-links a{font-size:.9rem;}
+  .nav-cta .btn-primary{padding:12px 20px; font-size:.92rem;}
+}
+.schedule-table{table-layout:fixed;}
+.schedule-table th:nth-child(1){width:15%;}
+.schedule-table th:nth-child(2){width:41%;}
+.schedule-table th:nth-child(3){width:44%;}
+.schedule-table td:first-child{white-space:nowrap;}
+.digi-block{margin-left:0;}
+.ev-img-wide{max-width:520px;}

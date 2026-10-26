@@ -5,6 +5,7 @@
     { "source": "/:lang(fi|en|ru)/:slug/", "destination": "/:lang/:slug.html" }
   ],
   "redirects": [
+    { "source": "/", "destination": "/fi/", "permanent": false },
     { "source": "/:lang(fi|en|ru)/:slug.html", "destination": "/:lang/:slug/", "permanent": true },
     { "source": "/:lang(fi|en|ru)/index/", "destination": "/:lang/", "permanent": true },
 
