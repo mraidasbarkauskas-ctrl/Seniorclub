@@ -485,3 +485,12 @@ body.nav-open{overflow:hidden;}
 
 .ev-img{width:auto; height:auto; max-width:min(100%,360px); object-fit:contain;}
 .ev-img-wide{width:auto; height:auto;}
+/* nav: never overlap — phone lives in the top bar, menu may wrap instead of colliding */
+@media (min-width:1081px){
+  .nav-cta .phone{display:none;}
+  .nav-links{flex:1 1 auto; min-width:0; flex-wrap:wrap; justify-content:flex-end; gap:6px 16px; margin:0 20px;}
+  .nav-links a{font-size:.9rem;}
+  .main-nav{gap:12px;}
+}
+@media (min-width:1081px) and (max-width:1700px){ .nav-links{gap:6px 13px;} .nav-links a{font-size:.86rem;} }
+html[lang="ru"] .nav-links a{font-size:.84rem;}
