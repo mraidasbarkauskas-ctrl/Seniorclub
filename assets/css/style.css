@@ -152,7 +152,7 @@ nav.main-nav{display:flex; align-items:center; justify-content:space-between; he
 .dropdown-menu a{display:block; padding:11px 14px; border-radius:10px; font-size:0.94rem; font-weight:600; color:#EAF1FB; opacity:.92; white-space:normal;}
 .dropdown-menu a:hover{opacity:1; background:rgba(239,203,124,.14); color:var(--gold-400);}
 
-@media (max-width:1080px){
+@media (max-width:1360px){
   .nav-links{
     position:fixed; top:140px; left:0; right:0; bottom:0; background:var(--jade-deep);
     flex-direction:column; flex-wrap:nowrap; align-items:stretch; gap:0; padding:14px 24px 32px;
@@ -470,11 +470,6 @@ body.nav-open{overflow:hidden;}
 .ev-img-wide{display:block; max-width:100%; height:auto; border-radius:18px;}
 .video-block video{width:100%; height:auto; border-radius:16px; background:#000;}
 .footer-fb{color:inherit; text-decoration:underline;}
-@media (min-width:1101px) and (max-width:1700px){
-  .nav-links{gap:14px; flex-wrap:nowrap;}
-  .nav-links a{font-size:.9rem;}
-  .nav-cta .btn-primary{padding:12px 20px; font-size:.92rem;}
-}
 .schedule-table{table-layout:fixed;}
 .schedule-table th:nth-child(1){width:15%;}
 .schedule-table th:nth-child(2){width:41%;}
@@ -486,11 +481,14 @@ body.nav-open{overflow:hidden;}
 .ev-img{width:auto; height:auto; max-width:min(100%,360px); object-fit:contain;}
 .ev-img-wide{width:auto; height:auto;}
 /* nav: never overlap — phone lives in the top bar, menu may wrap instead of colliding */
-@media (min-width:1081px){
+@media (min-width:1361px){
   .nav-cta .phone{display:none;}
   .nav-links{flex:1 1 auto; min-width:0; flex-wrap:wrap; justify-content:flex-end; gap:6px 16px; margin:0 20px;}
   .nav-links a{font-size:.9rem;}
   .main-nav{gap:12px;}
 }
-@media (min-width:1081px) and (max-width:1700px){ .nav-links{gap:6px 13px;} .nav-links a{font-size:.86rem;} }
+@media (min-width:1361px) and (max-width:1700px){ .nav-links{gap:6px 13px;} .nav-links a{font-size:.86rem;} }
 html[lang="ru"] .nav-links a{font-size:.84rem;}
+@media (min-width:1361px){ .nav-links{margin:0 8px;} .nav-cta{gap:8px;} }
+@media (min-width:1361px) and (max-width:1700px){ html[lang="ru"] .nav-cta .btn-primary{padding:10px 16px; font-size:.8rem;} html[lang="ru"] .nav-links{gap:6px 11px;} }
+@media (min-width:1361px){ header.site-header .container{max-width:1500px;} }
