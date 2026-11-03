@@ -1,57 +1,213 @@
 {
   "trailingSlash": true,
   "rewrites": [
-    { "source": "/:lang(fi|en|ru)/", "destination": "/:lang/index.html" },
-    { "source": "/:lang(fi|en|ru)/:slug/", "destination": "/:lang/:slug.html" }
+    {
+      "source": "/:lang(fi|en|ru)/",
+      "destination": "/:lang/index.html"
+    },
+    {
+      "source": "/:lang(fi|en|ru)/:slug/",
+      "destination": "/:lang/:slug.html"
+    }
   ],
   "redirects": [
-    { "source": "/", "destination": "/fi/", "permanent": false },
-    { "source": "/:lang(fi|en|ru)/:slug.html", "destination": "/:lang/:slug/", "permanent": true },
-    { "source": "/:lang(fi|en|ru)/index/", "destination": "/:lang/", "permanent": true },
-
-    { "source": "/mumili/", "destination": "/fi/mumili/", "permanent": true },
-    { "source": "/seniori-sielunystavat/", "destination": "/fi/seniori-sielunystavat/", "permanent": true },
-    { "source": "/seniori-samurai/", "destination": "/fi/seniori-samurai/", "permanent": true },
-    { "source": "/seniori-mieli/", "destination": "/fi/seniori-mieli/", "permanent": true },
-    { "source": "/seniori-muisti/", "destination": "/fi/seniori-muisti/", "permanent": true },
-    { "source": "/seniorien-liikunta/", "destination": "/fi/seniorien-liikunta/", "permanent": true },
-    { "source": "/nain-voit-auttaa/", "destination": "/fi/nain-voit-auttaa/", "permanent": true },
-    { "source": "/ota-yhteytta/", "destination": "/fi/ota-yhteytta/", "permanent": true },
-    { "source": "/fi/aikataulu/", "destination": "/fi/aikataulut/", "permanent": true },
-    { "source": "/fi/kauppa/", "destination": "/fi/", "permanent": true },
-    { "source": "/fi/ostoskori/", "destination": "/fi/", "permanent": true },
-
-    { "source": "/en/seniors-friendship-club/", "destination": "/en/seniori-sielunystavat/", "permanent": true },
-    { "source": "/en/senior-samurai/", "destination": "/en/seniori-samurai/", "permanent": true },
-    { "source": "/en/seniors-mind/", "destination": "/en/seniori-mieli/", "permanent": true },
-    { "source": "/en/seniors-memory/", "destination": "/en/seniori-muisti/", "permanent": true },
-    { "source": "/en/senior-shape/", "destination": "/en/seniorien-liikunta/", "permanent": true },
-    { "source": "/en/projects/", "destination": "/en/hanketoiminta/", "permanent": true },
-    { "source": "/en/mumili-memory-mind-and-movement-club/", "destination": "/en/mumili-muisti-mieli-ja-liike-klubi/", "permanent": true },
-    { "source": "/en/seniorien-voima-movement-and-memory/", "destination": "/en/seniorien-voima-liike-ja-muisti/", "permanent": true },
-    { "source": "/en/activities-promoting-the-wellbeing-of-multilingual-older-people/", "destination": "/en/monikielisten-ikaantyneiden-hyvinvointia-lisaava-toiminta/", "permanent": true },
-    { "source": "/en/psychosocial-support-for-multilingual-older-people/", "destination": "/en/monikielisten-ikaantyneiden-psykososiaalinen-tuki/", "permanent": true },
-    { "source": "/en/timetable/", "destination": "/en/aikataulut/", "permanent": true },
-    { "source": "/en/aikataulu/", "destination": "/en/aikataulut/", "permanent": true },
-    { "source": "/en/customer-feedback/", "destination": "/en/asiakas-palautteet/", "permanent": true },
-    { "source": "/en/how-can-you-help/", "destination": "/en/nain-voit-auttaa/", "permanent": true },
-    { "source": "/en/contact-us/", "destination": "/en/ota-yhteytta/", "permanent": true },
-    { "source": "/en/cart/", "destination": "/en/", "permanent": true },
-    { "source": "/en/shop-2/", "destination": "/en/", "permanent": true },
-
-    { "source": "/ru/aikataulu/", "destination": "/ru/aikataulut/", "permanent": true }
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "seniorclub.fi"
+        }
+      ],
+      "destination": "https://www.seniorclub.fi/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "/fi/",
+      "permanent": false
+    },
+    {
+      "source": "/:lang(fi|en|ru)/:slug.html",
+      "destination": "/:lang/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/:lang(fi|en|ru)/index/",
+      "destination": "/:lang/",
+      "permanent": true
+    },
+    {
+      "source": "/mumili/",
+      "destination": "/fi/mumili/",
+      "permanent": true
+    },
+    {
+      "source": "/seniori-sielunystavat/",
+      "destination": "/fi/seniori-sielunystavat/",
+      "permanent": true
+    },
+    {
+      "source": "/seniori-samurai/",
+      "destination": "/fi/seniori-samurai/",
+      "permanent": true
+    },
+    {
+      "source": "/seniori-mieli/",
+      "destination": "/fi/seniori-mieli/",
+      "permanent": true
+    },
+    {
+      "source": "/seniori-muisti/",
+      "destination": "/fi/seniori-muisti/",
+      "permanent": true
+    },
+    {
+      "source": "/seniorien-liikunta/",
+      "destination": "/fi/seniorien-liikunta/",
+      "permanent": true
+    },
+    {
+      "source": "/nain-voit-auttaa/",
+      "destination": "/fi/nain-voit-auttaa/",
+      "permanent": true
+    },
+    {
+      "source": "/ota-yhteytta/",
+      "destination": "/fi/ota-yhteytta/",
+      "permanent": true
+    },
+    {
+      "source": "/fi/aikataulu/",
+      "destination": "/fi/aikataulut/",
+      "permanent": true
+    },
+    {
+      "source": "/fi/kauppa/",
+      "destination": "/fi/",
+      "permanent": true
+    },
+    {
+      "source": "/fi/ostoskori/",
+      "destination": "/fi/",
+      "permanent": true
+    },
+    {
+      "source": "/en/seniors-friendship-club/",
+      "destination": "/en/seniori-sielunystavat/",
+      "permanent": true
+    },
+    {
+      "source": "/en/senior-samurai/",
+      "destination": "/en/seniori-samurai/",
+      "permanent": true
+    },
+    {
+      "source": "/en/seniors-mind/",
+      "destination": "/en/seniori-mieli/",
+      "permanent": true
+    },
+    {
+      "source": "/en/seniors-memory/",
+      "destination": "/en/seniori-muisti/",
+      "permanent": true
+    },
+    {
+      "source": "/en/senior-shape/",
+      "destination": "/en/seniorien-liikunta/",
+      "permanent": true
+    },
+    {
+      "source": "/en/projects/",
+      "destination": "/en/hanketoiminta/",
+      "permanent": true
+    },
+    {
+      "source": "/en/mumili-memory-mind-and-movement-club/",
+      "destination": "/en/mumili-muisti-mieli-ja-liike-klubi/",
+      "permanent": true
+    },
+    {
+      "source": "/en/seniorien-voima-movement-and-memory/",
+      "destination": "/en/seniorien-voima-liike-ja-muisti/",
+      "permanent": true
+    },
+    {
+      "source": "/en/activities-promoting-the-wellbeing-of-multilingual-older-people/",
+      "destination": "/en/monikielisten-ikaantyneiden-hyvinvointia-lisaava-toiminta/",
+      "permanent": true
+    },
+    {
+      "source": "/en/psychosocial-support-for-multilingual-older-people/",
+      "destination": "/en/monikielisten-ikaantyneiden-psykososiaalinen-tuki/",
+      "permanent": true
+    },
+    {
+      "source": "/en/timetable/",
+      "destination": "/en/aikataulut/",
+      "permanent": true
+    },
+    {
+      "source": "/en/aikataulu/",
+      "destination": "/en/aikataulut/",
+      "permanent": true
+    },
+    {
+      "source": "/en/customer-feedback/",
+      "destination": "/en/asiakas-palautteet/",
+      "permanent": true
+    },
+    {
+      "source": "/en/how-can-you-help/",
+      "destination": "/en/nain-voit-auttaa/",
+      "permanent": true
+    },
+    {
+      "source": "/en/contact-us/",
+      "destination": "/en/ota-yhteytta/",
+      "permanent": true
+    },
+    {
+      "source": "/en/cart/",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/en/shop-2/",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/aikataulu/",
+      "destination": "/ru/aikataulut/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     }
   ]
