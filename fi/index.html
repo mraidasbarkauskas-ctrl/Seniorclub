@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- SENIORCLUB.FI · fi/index.html -->
 <html lang="fi">
 <head>
 <meta charset="UTF-8">
@@ -318,22 +319,27 @@
           <dl style="margin-top:28px;"><div><dt>Osoite</dt><dd>Rauduntie 12 D 8, 02130 Espoo</dd></div><div><dt>Sähköposti</dt><dd>seniorclub@seniorclub.fi</dd></div><div><dt>Puhelin</dt><dd>+358 50 4623270</dd></div><div><dt>Kielet</dt><dd>Suomi · Englanti · Venäjä</dd></div></dl>
         </div>
         <div class="contact-form-card">
-          <form id="contactForm" class="real-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-subject="Liity mukaan" data-l-name="Nimi" data-l-email="Sähköposti" data-l-phone="Puhelin" data-l-interest="Kiinnostaa">
+          <form id="contactForm" class="real-contact-form" action="https://formspree.io/f/xjyylrqn" method="POST" data-subject="Liity mukaan" data-l-name="Nimi" data-l-email="Sähköposti" data-l-phone="Puhelin" data-l-interest="Kiinnostaa">
             <input type="hidden" name="_subject" value="Uusi yhteydenotto — seniorclub.fi">
             <label class="hp-field" aria-hidden="true">Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
             <div class="form-grid">
               <div class="form-field"><label for="f-name">Nimi *</label><input id="f-name" name="name" type="text" required></div>
+              <div class="form-field"><label for="f-age">Ikä</label><input id="f-age" name="age" type="text" inputmode="numeric"></div>
+              <div class="form-field"><label for="f-phone">Puhelin *</label><input id="f-phone" name="phone" type="tel" required></div>
               <div class="form-field"><label for="f-email">Sähköposti *</label><input id="f-email" name="email" type="email" required></div>
-              <div class="form-field"><label for="f-phone">Puhelin</label><input id="f-phone" name="phone" type="tel"></div>
               <div class="form-field">
                 <label for="f-interest">Kiinnostaa</label>
                 <select id="f-interest" name="interest">
                   <option value="">Valitse klubi</option>
                   <option value="MUMILI">MUMILI</option><option value="Seniorin ystäväklubi">Seniorin ystäväklubi</option><option value="Seniori Samurai">Seniori Samurai</option><option value="Seniorin mieli">Seniorin mieli</option><option value="Oppiminen ja osallisuus">Oppiminen ja osallisuus</option><option value="Seniorien liikunta">Seniorien liikunta</option><option value="Muu / en tiedä vielä">Muu / en tiedä vielä</option>
-                <option value="laheinen">Etsin toimintaa läheiselleni</option></select>
+                <option value="Tule vapaaehtoiseksi" data-key="vapaaehtoinen" data-extra="volunteer">Tule vapaaehtoiseksi</option><option value="Liity kannatusjäseneksi / Lahjoita" data-key="tukija" data-extra="sponsor">Liity kannatusjäseneksi / Lahjoita</option>
+                <option value="Etsin toimintaa läheiselleni" data-key="laheinen">Etsin toimintaa läheiselleni</option></select>
               </div>
+              <div class="form-extra" data-extra="volunteer" hidden><div class="form-field"><label for="f-residence">Asuinpaikka *</label><input id="f-residence" name="residence" type="text" required disabled></div><div class="form-field"><label>Kielitaito</label><div class="form-checks"><label><input disabled type="checkbox" name="language_1" value="Suomi"> Suomi</label><label><input disabled type="checkbox" name="language_2" value="Englanti"> Englanti</label><label><input disabled type="checkbox" name="language_3" value="Venäjä"> Venäjä</label></div></div><div class="form-field full"><label>Millainen vapaaehtoistyö kiinnostaa sinua?</label><div class="form-checks"><label><input disabled type="checkbox" name="volunteer_interest_1" value="Mielenterveysalan asiantuntijana"> Mielenterveysalan asiantuntijana</label><label><input disabled type="checkbox" name="volunteer_interest_2" value="Sosiaalialan asiantuntijana"> Sosiaalialan asiantuntijana</label><label><input disabled type="checkbox" name="volunteer_interest_3" value="Liikunnanohjauksen asiantuntijana"> Liikunnanohjauksen asiantuntijana</label><label><input disabled type="checkbox" name="volunteer_interest_4" value="Viestintä ja markkinointi"> Viestintä ja markkinointi</label><label><input disabled type="checkbox" name="volunteer_interest_5" value="Some (LinkedIn, Facebook, Telegram, Instagram, TikTok)"> Some (LinkedIn, Facebook, Telegram, Instagram, TikTok)</label><label><input disabled type="checkbox" name="volunteer_interest_6" value="Sisällöntuotanto (blogit, käännökset, verkkosivut)"> Sisällöntuotanto (blogit, käännökset, verkkosivut)</label><label><input disabled type="checkbox" name="volunteer_interest_7" value="Tekninen tuki"> Tekninen tuki</label></div></div><div class="form-field"><label for="f-edu">Koulutus</label><input id="f-edu" name="education" type="text" disabled></div><div class="form-field"><label for="f-exp">Työkokemus</label><input id="f-exp" name="work_experience" type="text" disabled></div><p class="form-note full">Annan suostumukseni henkilötietojeni käsittelyyn Suomen ja EU:n lakien mukaisesti (Tietosuojalaki 1050/2018).</p></div>
+              <div class="form-extra" data-extra="sponsor" hidden><div class="form-field full"><label for="f-address">Osoite *</label><input id="f-address" name="address" type="text" required disabled></div><div class="form-field"><label for="f-zip">Postinumero *</label><input id="f-zip" name="postal_code" type="text" required disabled></div><div class="form-field"><label for="f-city">Postitoimipaikka *</label><input id="f-city" name="city" type="text" required disabled></div><div class="form-field full"><label>Yksityishenkilö vai yritys tai yhteisö *</label><div class="form-checks"><label><input type="radio" name="donor_type" value="Yksityishenkilö" required disabled> Yksityishenkilö</label><label><input type="radio" name="donor_type" value="Yritys tai yhteisö" required disabled> Yritys tai yhteisö</label></div></div><div class="form-field full"><label for="f-amount">Summa, jonka haluat lahjoittaa yhdistykselle *</label><input id="f-amount" name="amount" type="text" required disabled></div></div>
               <div class="form-field full"><label for="f-message">Viesti</label><textarea id="f-message" name="message"></textarea></div>
             </div>
+            <p class="form-note">Tietosi säilytetään suojatusti ja niitä käytetään vain lain sallimiin tarkoituksiin.</p>
             <button type="submit" class="btn btn-primary">Lähetä</button>
             <div id="formSuccess" class="form-success" tabindex="-1" aria-live="polite">✓ Kiitos! Otamme sinuun yhteyttä pian.</div>
             <div class="form-error" tabindex="-1" aria-live="assertive">✕ Lähetys epäonnistui. Yritä hetken kuluttua uudelleen tai kirjoita suoraan osoitteeseen <a href="mailto:seniorclub@seniorclub.fi">seniorclub@seniorclub.fi</a>.</div>

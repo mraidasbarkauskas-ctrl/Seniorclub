@@ -1,3 +1,4 @@
+// SENIORCLUB.FI · assets/js/main.js
 document.addEventListener('DOMContentLoaded', function () {
   var burger = document.querySelector('.burger');
   var navLinks = document.querySelector('.nav-links');
@@ -73,11 +74,42 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Preselect form interest from ?aihe=laheinen (used by the Läheisille page CTA)
+// Contact form: preselect interest (?aihe=laheinen | vapaaehtoinen | tukija) and
+// show the extra volunteer / sponsor fields only for the chosen interest.
 document.addEventListener('DOMContentLoaded', function () {
+  var sel = document.getElementById('f-interest');
+  if (!sel) return;
+  var form = sel.form;
+  var subjectField = form ? form.querySelector('input[name="_subject"]') : null;
+  var baseSubject = subjectField ? subjectField.value : '';
+
+  function syncExtras() {
+    var opt = sel.options[sel.selectedIndex];
+    var active = opt ? opt.getAttribute('data-extra') : null;
+    document.querySelectorAll('.form-extra').forEach(function (box) {
+      var on = box.getAttribute('data-extra') === active;
+      box.hidden = !on;
+      box.querySelectorAll('input, select, textarea').forEach(function (el) { el.disabled = !on; });
+    });
+    if (subjectField) {
+      subjectField.value = baseSubject + (sel.value ? ' — ' + sel.value : '');
+    }
+  }
+
   try {
     var q = new URLSearchParams(window.location.search).get('aihe');
-    var sel = document.getElementById('f-interest');
-    if (q && sel) { sel.value = q; }
+    if (q) {
+      var found = false;
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value === q || sel.options[i].getAttribute('data-key') === q) {
+          sel.selectedIndex = i; found = true; break;
+        }
+      }
+      if (!found) { sel.value = q; }
+    }
   } catch (e) {}
+
+  sel.addEventListener('change', syncExtras);
+  if (form) { form.addEventListener('reset', function () { setTimeout(syncExtras, 0); }); }
+  syncExtras();
 });
